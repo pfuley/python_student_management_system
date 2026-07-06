@@ -1,0 +1,9 @@
+
+## Add this to `.gitignore`
+
+```gitignore
+__pycache__/
+*.pyc
+.env
+.venv/
+venv/
