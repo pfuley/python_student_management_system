@@ -11,12 +11,12 @@ A command-line application built in Python to manage student records. This proje
 * Search students by Student Name
 * Update existing student details by Student ID
 * Delete a student by Student ID
-* Store student information in memory during program execution
+* Save all student records to a CSV file
+* Store student information as objects during program execution
 * Object-Oriented Programming using a `Student` class
 
 ## Planned Features
 
-* Save student data to a CSV file
 * Load student data from a CSV file
 * Student statistics
 * Sort students
@@ -41,11 +41,18 @@ python_student_management_system/
 ## Technologies Used
 
 * Python 3
-* Object-Oriented Programming
-* Command-Line Interface
+* Object-Oriented Programming (OOP)
+* CSV File Handling
+* Command-Line Interface (CLI)
 * Git & GitHub
 
 ## How to Run
+
+1. Clone the repository.
+
+2. Navigate to the project directory.
+
+3. Run:
 
 ```bash
 python main.py
@@ -53,31 +60,34 @@ python main.py
 
 ## How It Works
 
-Student records are stored as `Student` objects inside a Python list. Users can add, view, search, update, and delete student records through a menu-driven interface.
+Student records are stored as `Student` objects while the application is running. Users can perform all CRUD operations through the menu interface.
 
-At this stage, all data exists only while the program is running. If the program closes, the student records are lost. CSV file saving and loading will be added in future commits.
+Selecting **Save Data** exports every student record into a CSV file named `students.csv`, allowing the data to be stored outside the application for future use.
 
 ## Current Status
 
-The application now supports the core CRUD operations:
+The application now supports:
 
 * Create student records
-* Read/view student records
+* View student records
+* Search student records
 * Update student records
 * Delete student records
+* Export student records to a CSV file
+
+The next milestone is automatically loading previously saved data when the application starts.
 
 ## Learning Goals
 
 This project practices:
 
 * Python fundamentals
+* Object-Oriented Programming
 * Classes and objects
-* Functions
+* CRUD operations
+* File handling
+* CSV file writing
 * Lists
 * Loops
-* Linear search
-* Object mutation
-* Removing items from a list
-* CRUD operations
 * Modular programming
 * Git workflow

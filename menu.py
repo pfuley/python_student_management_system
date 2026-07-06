@@ -1,4 +1,5 @@
 from student import Student
+from file_handler import save_students
 
 def add_student(students):
     print("\nAdd Student")
@@ -156,6 +157,9 @@ def show_menu(students):
 
         elif choice == "5":
             delete_student(students)
+
+        elif choice == "8":
+            save_students(students)
 
         elif choice == "9":
             print("Exiting Student Management System.")
