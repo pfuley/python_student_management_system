@@ -21,6 +21,16 @@ def add_student(students):
 
     print("\nStudent added successfully.")
 
+def view_students(students):
+    print("\nView Students")
+
+    if not students:
+        print("No students found.")
+        return
+
+    for student in students:
+        student.display_student()
+
 def show_menu(students):
     while True:
         print("\n==============================")
@@ -40,6 +50,9 @@ def show_menu(students):
 
         if choice == "1":
             add_student(students)
+
+        elif choice == "2":
+            view_students(students)
 
         elif choice == "9":
             print("Exiting Student Management System.")

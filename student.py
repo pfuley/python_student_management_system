@@ -5,3 +5,12 @@ class Student:
         self.age = age
         self.course = course
         self.marks = marks
+    
+    def display_student(self):
+        print("------------------------------")
+        print(f"ID: {self.student_id}")
+        print(f"Name: {self.name}")
+        print(f"Age: {self.age}")
+        print(f"Course: {self.course}")
+        print(f"Marks: {self.marks}")
+        print("------------------------------")
