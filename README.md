@@ -8,14 +8,14 @@ A command-line application built in Python to manage student records. This proje
 * Add a new student
 * View all students
 * Search students by Student ID
-* Search students by Student Name (case-insensitive)
+* Search students by Student Name
 * Update existing student details by Student ID
+* Delete a student by Student ID
 * Store student information in memory during program execution
 * Object-Oriented Programming using a `Student` class
 
 ## Planned Features
 
-* Delete students
 * Save student data to a CSV file
 * Load student data from a CSV file
 * Student statistics
@@ -41,17 +41,11 @@ python_student_management_system/
 ## Technologies Used
 
 * Python 3
-* Object-Oriented Programming (OOP)
-* Command-Line Interface (CLI)
+* Object-Oriented Programming
+* Command-Line Interface
 * Git & GitHub
 
 ## How to Run
-
-1. Clone the repository.
-
-2. Navigate to the project folder.
-
-3. Run:
 
 ```bash
 python main.py
@@ -59,11 +53,18 @@ python main.py
 
 ## How It Works
 
-Student records are stored as `Student` objects inside a Python list. Users can add, view, search, and update student information through a menu-driven interface. When updating a student, leaving a field blank keeps its current value, making partial updates simple and user-friendly.
+Student records are stored as `Student` objects inside a Python list. Users can add, view, search, update, and delete student records through a menu-driven interface.
+
+At this stage, all data exists only while the program is running. If the program closes, the student records are lost. CSV file saving and loading will be added in future commits.
 
 ## Current Status
 
-The application now supports creating, viewing, searching, and updating student records during a single program session. Persistent storage, deletion, statistics, sorting, and input validation will be added in future commits.
+The application now supports the core CRUD operations:
+
+* Create student records
+* Read/view student records
+* Update student records
+* Delete student records
 
 ## Learning Goals
 
@@ -71,12 +72,12 @@ This project practices:
 
 * Python fundamentals
 * Classes and objects
-* Object mutation
 * Functions
 * Lists
 * Loops
 * Linear search
-* Conditional statements
-* Modular programming
+* Object mutation
+* Removing items from a list
 * CRUD operations
+* Modular programming
 * Git workflow
