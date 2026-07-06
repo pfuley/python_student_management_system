@@ -126,6 +126,38 @@ def delete_student(students):
 
     print("Student not found.")
 
+def student_statistics(students):
+    print("\nStudent Statistics")
+
+    if not students:
+        print("No students found.")
+        return
+
+    total_students = len(students)
+
+    marks = [float(student.marks) for student in students]
+
+    average_marks = sum(marks) / total_students
+
+    highest_student = max(
+        students,
+        key=lambda student: float(student.marks)
+    )
+
+    lowest_student = min(
+        students,
+        key=lambda student: float(student.marks)
+    )
+
+    print(f"\nTotal Students : {total_students}")
+    print(f"Average Marks  : {average_marks:.2f}")
+
+    print("\nHighest Marks")
+    highest_student.display_student()
+
+    print("\nLowest Marks")
+    lowest_student.display_student()
+
 def show_menu(students):
     while True:
         print("\n==============================")
@@ -157,6 +189,9 @@ def show_menu(students):
 
         elif choice == "5":
             delete_student(students)
+
+        elif choice == "6":
+            student_statistics(students)
 
         elif choice == "8":
             save_students(students)

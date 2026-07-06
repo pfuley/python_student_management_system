@@ -13,12 +13,17 @@ A command-line application built in Python to manage student records. This proje
 * Delete a student by Student ID
 * Save student records to a CSV file
 * Automatically load student records from a CSV file on startup
+* View student statistics:
+
+  * Total students
+  * Average marks
+  * Highest marks
+  * Lowest marks
 * Store student information as `Student` objects in memory
 * Object-Oriented Programming using a `Student` class
 
 ## Planned Features
 
-* Student statistics
 * Sort students
 * Input validation and error handling
 
@@ -58,11 +63,11 @@ python main.py
 
 ## How It Works
 
-When the application starts, it automatically loads student records from `students.csv` into memory as `Student` objects. Users can then add, view, search, update, or delete records during the session. Selecting **Save Data** writes the current records back to the CSV file, allowing changes to persist between program runs.
+The application automatically loads student records from `students.csv` when it starts. Users can manage student records through a menu-driven interface and save their changes back to the CSV file. The Statistics feature analyzes the stored student data and displays summary information such as total students, average marks, and the students with the highest and lowest marks.
 
 ## Current Status
 
-The application now supports persistent storage using CSV files. Student data can be loaded at startup and saved after changes, making the project function as a simple file-based student management system.
+The application now supports complete CRUD functionality, CSV-based persistence, and basic statistical analysis of student records.
 
 ## Learning Goals
 
@@ -71,9 +76,11 @@ This project practices:
 * Python fundamentals
 * Object-Oriented Programming
 * CRUD operations
-* File handling
 * CSV file reading and writing
-* Module organization
+* File handling
 * Lists and loops
-* Persistent data storage
+* List comprehensions
+* Lambda functions
+* Aggregate calculations
+* Modular programming
 * Git workflow
