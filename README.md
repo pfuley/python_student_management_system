@@ -8,12 +8,13 @@ A command-line application built in Python to manage student records. This proje
 * Add a new student
 * Store student information in memory during program execution
 * View all students currently stored in memory
+* Search students by Student ID
+* Search students by Student Name (case-insensitive)
 * Object-Oriented Programming using a `Student` class
 * Student display method inside the `Student` class
 
 ## Planned Features
 
-* Search students by ID or name
 * Update student details
 * Delete students
 * Save student data to a CSV file
@@ -67,13 +68,11 @@ python main.py
 
 ## How It Works
 
-The program starts with an interactive menu. Users can add student records by entering details such as student ID, name, age, course, and marks.
-
-Students are stored in a Python list while the program is running. The `Student` class contains a `display_student()` method, which is used to print student details in a readable format.
+Student records are stored in memory as `Student` objects inside a Python list. Users can add new students, view all students, and search for a student using either their ID or name. Name searches are case-insensitive, making the application easier to use.
 
 ## Current Status
 
-At this stage, students can be added and viewed while the program is running. The data is not yet saved permanently. CSV file support and additional management features will be added in future commits.
+The application currently supports creating, viewing, and searching student records during a single program session. Data persistence, editing, deletion, and statistics will be implemented in future commits.
 
 ## Learning Goals
 
@@ -85,6 +84,9 @@ This project is designed to practice:
 * Functions
 * Lists
 * Loops
+* Linear search
+* Conditional statements
 * Modular programming
 * Git workflow
 * Building applications incrementally
+

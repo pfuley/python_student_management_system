@@ -31,6 +31,44 @@ def view_students(students):
     for student in students:
         student.display_student()
 
+def search_student(students):
+    print("\nSearch Student")
+
+    if not students:
+        print("No students found.")
+        return
+
+    print("\nSearch By")
+    print("1. Student ID")
+    print("2. Student Name")
+
+    choice = input("\nChoose an option: ")
+
+    if choice == "1":
+        student_id = input("Enter Student ID: ")
+
+        for student in students:
+            if student.student_id == student_id:
+                print("\nStudent Found")
+                student.display_student()
+                return
+
+        print("Student not found.")
+
+    elif choice == "2":
+        name = input("Enter Student Name: ").lower()
+
+        for student in students:
+            if student.name.lower() == name:
+                print("\nStudent Found")
+                student.display_student()
+                return
+
+        print("Student not found.")
+
+    else:
+        print("Invalid option.")
+
 def show_menu(students):
     while True:
         print("\n==============================")
@@ -53,6 +91,9 @@ def show_menu(students):
 
         elif choice == "2":
             view_students(students)
+
+        elif choice == "3":
+            search_student(students)
 
         elif choice == "9":
             print("Exiting Student Management System.")
