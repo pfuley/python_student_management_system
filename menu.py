@@ -1,4 +1,27 @@
-def show_menu():
+from student import Student
+
+def add_student(students):
+    print("\nAdd Student")
+
+    student_id = input("Student ID: ")
+    name = input("Name: ")
+    age = input("Age: ")
+    course = input("Course: ")
+    marks = input("Marks: ")
+
+    student = Student(
+        student_id,
+        name,
+        age,
+        course,
+        marks
+    )
+
+    students.append(student)
+
+    print("\nStudent added successfully.")
+
+def show_menu(students):
     while True:
         print("\n==============================")
         print(" Student Management System")
@@ -15,8 +38,12 @@ def show_menu():
 
         choice = input("\nChoose an option: ")
 
-        if choice == "9":
+        if choice == "1":
+            add_student(students)
+
+        elif choice == "9":
             print("Exiting Student Management System.")
             break
+
         else:
             print("Feature not added yet.")
