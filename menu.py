@@ -69,6 +69,45 @@ def search_student(students):
     else:
         print("Invalid option.")
 
+def update_student(students):
+    print("\nUpdate Student")
+
+    if not students:
+        print("No students found.")
+        return
+
+    student_id = input("Enter Student ID to update: ")
+
+    for student in students:
+        if student.student_id == student_id:
+
+            print("\nCurrent Details")
+            student.display_student()
+
+            print("\nLeave a field blank to keep the current value.")
+
+            name = input(f"New Name ({student.name}): ")
+            age = input(f"New Age ({student.age}): ")
+            course = input(f"New Course ({student.course}): ")
+            marks = input(f"New Marks ({student.marks}): ")
+
+            if name:
+                student.name = name
+
+            if age:
+                student.age = age
+
+            if course:
+                student.course = course
+
+            if marks:
+                student.marks = marks
+
+            print("\nStudent updated successfully.")
+            return
+
+    print("Student not found.")
+
 def show_menu(students):
     while True:
         print("\n==============================")
@@ -94,6 +133,9 @@ def show_menu(students):
 
         elif choice == "3":
             search_student(students)
+
+        elif choice == "4":
+            update_student(students)
 
         elif choice == "9":
             print("Exiting Student Management System.")

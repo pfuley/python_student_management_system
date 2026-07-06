@@ -6,16 +6,15 @@ A command-line application built in Python to manage student records. This proje
 
 * Interactive command-line menu
 * Add a new student
-* Store student information in memory during program execution
-* View all students currently stored in memory
+* View all students
 * Search students by Student ID
 * Search students by Student Name (case-insensitive)
+* Update existing student details by Student ID
+* Store student information in memory during program execution
 * Object-Oriented Programming using a `Student` class
-* Student display method inside the `Student` class
 
 ## Planned Features
 
-* Update student details
 * Delete students
 * Save student data to a CSV file
 * Load student data from a CSV file
@@ -48,19 +47,11 @@ python_student_management_system/
 
 ## How to Run
 
-1. Clone the repository:
+1. Clone the repository.
 
-```bash
-git clone <repository-url>
-```
+2. Navigate to the project folder.
 
-2. Navigate to the project folder:
-
-```bash
-cd python_student_management_system
-```
-
-3. Run the application:
+3. Run:
 
 ```bash
 python main.py
@@ -68,25 +59,24 @@ python main.py
 
 ## How It Works
 
-Student records are stored in memory as `Student` objects inside a Python list. Users can add new students, view all students, and search for a student using either their ID or name. Name searches are case-insensitive, making the application easier to use.
+Student records are stored as `Student` objects inside a Python list. Users can add, view, search, and update student information through a menu-driven interface. When updating a student, leaving a field blank keeps its current value, making partial updates simple and user-friendly.
 
 ## Current Status
 
-The application currently supports creating, viewing, and searching student records during a single program session. Data persistence, editing, deletion, and statistics will be implemented in future commits.
+The application now supports creating, viewing, searching, and updating student records during a single program session. Persistent storage, deletion, statistics, sorting, and input validation will be added in future commits.
 
 ## Learning Goals
 
-This project is designed to practice:
+This project practices:
 
 * Python fundamentals
 * Classes and objects
-* Methods
+* Object mutation
 * Functions
 * Lists
 * Loops
 * Linear search
 * Conditional statements
 * Modular programming
+* CRUD operations
 * Git workflow
-* Building applications incrementally
-
