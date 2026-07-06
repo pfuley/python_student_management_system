@@ -19,12 +19,16 @@ A command-line application built in Python to manage student records. This proje
   * Average marks
   * Highest marks
   * Lowest marks
+* Sort students by:
+
+  * Name (A–Z)
+  * Age (Lowest to Highest)
+  * Marks (Highest to Lowest)
 * Store student information as `Student` objects in memory
 * Object-Oriented Programming using a `Student` class
 
 ## Planned Features
 
-* Sort students
 * Input validation and error handling
 
 ## Project Structure
@@ -63,11 +67,11 @@ python main.py
 
 ## How It Works
 
-The application automatically loads student records from `students.csv` when it starts. Users can manage student records through a menu-driven interface and save their changes back to the CSV file. The Statistics feature analyzes the stored student data and displays summary information such as total students, average marks, and the students with the highest and lowest marks.
+The application automatically loads student records from `students.csv` when it starts. Users can manage records through a menu-driven interface, save changes to a CSV file, view statistics, and display students sorted by different fields. Sorting is performed on a temporary copy of the data, leaving the original order unchanged.
 
 ## Current Status
 
-The application now supports complete CRUD functionality, CSV-based persistence, and basic statistical analysis of student records.
+The application now supports complete CRUD functionality, CSV-based persistence, statistical analysis, and sorting of student records.
 
 ## Learning Goals
 
@@ -82,5 +86,6 @@ This project practices:
 * List comprehensions
 * Lambda functions
 * Aggregate calculations
+* Sorting with custom keys
 * Modular programming
 * Git workflow

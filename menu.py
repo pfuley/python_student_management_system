@@ -158,6 +158,48 @@ def student_statistics(students):
     print("\nLowest Marks")
     lowest_student.display_student()
 
+def sort_students(students):
+    print("\nSort Students")
+
+    if not students:
+        print("No students found.")
+        return
+
+    print("\nSort By")
+    print("1. Name (A-Z)")
+    print("2. Age (Lowest to Highest)")
+    print("3. Marks (Highest to Lowest)")
+
+    choice = input("\nChoose an option: ")
+
+    if choice == "1":
+        sorted_students = sorted(
+            students,
+            key=lambda student: student.name.lower()
+        )
+
+    elif choice == "2":
+        sorted_students = sorted(
+            students,
+            key=lambda student: int(student.age)
+        )
+
+    elif choice == "3":
+        sorted_students = sorted(
+            students,
+            key=lambda student: float(student.marks),
+            reverse=True
+        )
+
+    else:
+        print("Invalid option.")
+        return
+
+    print("\nSorted Students")
+
+    for student in sorted_students:
+        student.display_student()
+
 def show_menu(students):
     while True:
         print("\n==============================")
@@ -192,6 +234,9 @@ def show_menu(students):
 
         elif choice == "6":
             student_statistics(students)
+
+        elif choice == "7":
+            sort_students(students)
 
         elif choice == "8":
             save_students(students)
