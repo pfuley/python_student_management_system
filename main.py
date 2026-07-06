@@ -1,8 +1,9 @@
 from menu import show_menu
+from file_handler import load_students
 
 
 def main():
-    students = []
+    students = load_students()
     show_menu(students)
 
 
